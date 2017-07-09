@@ -1,0 +1,27 @@
+{
+  "name": "gif-today",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edocz/gif-today.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edocz/gif-today/issues"
+  },
+  "homepage": "https://github.com/edocz/gif-today#readme",
+  "dependencies": {
+    "art-template": "^4.12.1",
+    "koa": "^2.3.0",
+    "koa-art-template": "^1.1.1",
+    "koa-router": "^7.2.1",
+    "moment": "^2.18.1"
+  }
+}
