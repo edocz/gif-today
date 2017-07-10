@@ -1,1 +1,31 @@
-{{date}}-{{id}}
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+      <meta charset="utf-8">
+      <title>每日Gif - 逗趣每一天</title>
+      <meta name="keywords" content="搞笑,gif,搞笑动图,qq表情,逗逼">
+      <meta name="description" content="最新最全的搞笑动图，丰富你的表情库。">
+      <link rel="stylesheet" href="/style/common.css">
+      <script src='/script/jquery-1.12.4.min.js'></script>
+  </head>
+  <body>
+		<div class="wrapper">
+			<div class="header">
+				{{include 'mod/head'}}
+				{{include 'mod/nav'}}
+			</div>
+			<div class="container">
+				<div class="side">
+					{{include 'mod/recommend'}}
+				</div>
+				<div class="main">
+					{{include 'mod/breadcrumbs'}}
+					{{include 'mod/viewer'}}
+				</div>
+			</div>
+			<div class="footer">
+					{{include 'mod/foot'}}
+			</div>
+    </div>
+  </body>
+</html>

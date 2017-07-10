@@ -1,3 +1,6 @@
+'use strict';
+
+const serve  = require('koa-static');
 const Koa    = require('koa');
 const app    = new Koa();
 const path   = require('path');
@@ -11,14 +14,35 @@ render(app, {
 });
 
 router.get('/', async (ctx, next) => {
-	await ctx.render('index');
+	var recommends = [
+		{
+			title: '这单身狗也是没谁了！',
+			link: '/baozou/2017010102123'
+		},
+		{
+			title: '假期就想这么过。',
+			link: '/baozou/2017010102124'
+		},
+		{
+			title: '美女你的钥匙掉了！',
+			link: '/meinv/20171010112'
+		}
+	];
+
+	await ctx.render('index', { recommends: recommends });
+});
+
+router.get('/:channel', async (ctx, next) => {
+	await ctx.render('channel', { channel: ctx.params.channel });
 });
 
 router.get('/:date/:id', async (ctx, next) => {
-	await ctx.render('detail', {date: ctx.params.date, id:ctx.params.id});
+	// ctx.params.id
+	await ctx.render('detail', { date: ctx.params.date, title: ctx.params.id, channel: '暴走' });
 });
 
 app
+	.use(serve('assets'))
   .use(router.routes())
   .use(router.allowedMethods());
 
