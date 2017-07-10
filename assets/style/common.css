@@ -269,6 +269,24 @@ a{
     color: #333;
 }
 
+.mod-item {
+	display: flex;
+	flex-flow: wrap row;
+}
+
+.mod-iteminfo {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -15px;
+	padding: 10px 10px 8px;
+	opacity: 0;
+	transition: .25s;
+	background: linear-gradient(to top, rgba(0, 0, 0, .6) 0, rgba(0, 0, 0, 0) 100%);
+	font-size: 14px;
+	color: #fff;
+}
+
 .mod-article{
     padding: 20px;
     border: 1px solid #eee;
